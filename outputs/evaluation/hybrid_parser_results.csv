@@ -1,0 +1,11 @@
+prompt_id,query,exact_match,latency_seconds,error,intent_correct,metric_name_correct,room_correct,room_names_correct,aggregation_correct,frequency_correct,top_n_correct,ascending_correct,threshold_correct,chart_type_correct
+P01,Show the CO2 trend for Seminar Room 3.,True,21.007,,True,True,True,True,True,True,True,True,True,True
+P02,Plot the hourly temperature trend for The Hive.,True,15.967,,True,True,True,True,True,True,True,True,True,True
+P03,"Compare average CO2 in Seminar Room 2, Seminar Room 3 and The Hive.",True,14.469,,True,True,True,True,True,True,True,True,True,True
+P04,Compare average humidity in Cafe and Dining Room.,True,13.559,,True,True,True,True,True,True,True,True,True,True
+P05,Show the top five rooms with the highest average CO2.,True,14.664,,True,True,True,True,True,True,True,True,True,True
+P06,Show the ten least occupied rooms.,True,14.967,,True,True,True,True,True,True,True,True,True,True
+P07,Which are the three hottest rooms?,True,12.861,,True,True,True,True,True,True,True,True,True,True
+P08,Show the five rooms with the lowest average humidity.,True,19.619,,True,True,True,True,True,True,True,True,True,True
+P09,Which rooms have an average temperature above 21?,True,16.478,,True,True,True,True,True,True,True,True,True,True
+P10,Show rooms with average CO2 greater than 800.,True,15.058,,True,True,True,True,True,True,True,True,True,True
