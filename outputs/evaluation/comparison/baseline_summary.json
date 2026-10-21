@@ -1,0 +1,19 @@
+{
+    "parser_method": "parse_baseline",
+    "total_prompts": 10,
+    "exact_matches": 0,
+    "exact_match_accuracy": 0.0,
+    "average_latency_seconds": 14.783,
+    "field_accuracy": {
+        "intent": 60.0,
+        "metric_name": 100.0,
+        "room": 20.0,
+        "room_names": 40.0,
+        "aggregation": 100.0,
+        "frequency": 100.0,
+        "top_n": 90.0,
+        "ascending": 60.0,
+        "threshold": 100.0,
+        "chart_type": 90.0
+    }
+}

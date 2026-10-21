@@ -1,0 +1,3 @@
+system,exact_matches,total_prompts,exact_match_accuracy,average_latency_seconds
+Single-LLM baseline,0,10,0.0,14.783
+Hybrid parser,10,10,100.0,15.394

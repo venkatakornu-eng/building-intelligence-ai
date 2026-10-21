@@ -1,0 +1,11 @@
+field,baseline_accuracy,hybrid_accuracy,improvement_percentage_points
+intent,60.0,100.0,40.0
+metric_name,100.0,100.0,0.0
+room,20.0,100.0,80.0
+room_names,40.0,100.0,60.0
+aggregation,100.0,100.0,0.0
+frequency,100.0,100.0,0.0
+top_n,90.0,100.0,10.0
+ascending,60.0,100.0,40.0
+threshold,100.0,100.0,0.0
+chart_type,90.0,100.0,10.0
