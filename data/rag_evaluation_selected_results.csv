@@ -1,0 +1,13 @@
+﻿id,question,expected_answerable,actual_answerable,actual_abstained,status,generated_by,retrieval_method,retrieval_top_k,min_similarity,retrieval_time_seconds,generation_time_seconds,retrieved_chunk_count,retrieved_pages_expected_source,required_retrieval_pages,citation_pages_expected_source,citation_count,citation_refs_valid,retrieval_page_coverage_pass,expected_source_citation_pass,expected_source_cited,answerability_pass,required_group_coverage,content_pass,passed,error,answer
+RAG-06,How do I export a report for a building?,True,True,False,ok,local_llm,multi_query_diagnostic,4,0.5,0.107,75.263,6,"[1, 2, 3, 4, 5, 6]","[1, 2, 4, 5]","[1, 4, 5]",3,True,True,True,True,True,0.857,False,False,,"To export a report for a building, follow these steps:
+1. Go to the SmartViz Dashboard home page.
+2. Select the portfolio you want to work with.
+3. From the left-hand navigation panel, click the Map View icon.
+4. On the right-hand side of the screen, click the Export button.
+5. In the export menu, select Report.
+6. Choose the required Report Type.
+7. Choose the building whose information you want to export.
+To export information for a single building, select the building name from the dropdown list.
+To export information for all buildings, select the All option.
+8. Click Download.
+The report file will be downloaded to your device."

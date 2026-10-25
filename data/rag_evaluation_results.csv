@@ -1,0 +1,115 @@
+﻿id,question,expected_answerable,actual_answerable,actual_abstained,status,generated_by,retrieval_method,retrieval_top_k,min_similarity,retrieval_time_seconds,generation_time_seconds,retrieved_chunk_count,retrieved_pages_expected_source,required_retrieval_pages,citation_pages_expected_source,citation_count,citation_refs_valid,retrieval_page_coverage_pass,expected_source_citation_pass,expected_source_cited,answerability_pass,required_group_coverage,content_pass,passed,error,answer
+RAG-01,"How do I create and configure an alert, including its recipient?",TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,8,0.4,0.084,85.962,6,"[1, 2, 3, 4, 5, 6]","[1, 2, 3, 4, 5, 6]","[1, 2, 3, 4, 5, 6]",6,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"1. Open the Portfolio where you want to set the alert.
+2. From the left-side panel, go to the Alerts section.
+3. Click Create New Alert (top-right corner).
+4. A dialog box will open.
+5. Required Details
+   - Title – Give a name for the alert (e.g., Gateway Status and portfolio name or Sensor Status Alert and portfolio name).
+   - Type – Select whether the alert is for Gateway or Sensor.
+   - Target – Choose the level where the alert should apply:
+     - Entire Portfolio
+     - Specific Campus
+     - Specific Building
+   - Frequency – Select how often the alert should trigger:
+     - Daily
+     - Weekly
+     - Monthly
+6. Tick the Active checkbox.
+7. Click Add Alert to create the alert.
+Configure Alert Recipient (Database Step)
+8. Open the Database (DB).
+9. Open the following tables:
+   - metrics_app_emailalerttrigger
+10. Search for the alert using the title you created.
+   Example query:
+   title ILIKE 'Gateway Status Westminster'
+11. Copy the user_id value from this record.
+12. Open the auth_user table.
+13. Search for the user using first_name or last_name.
+   Example query:
+   first_name ILIKE '%username%'
+14. Locate the id column for that user.
+15. Replace the id with the user_id value from the metrics_app_emailalerttrigger table.
+16. Click Save.
+Verify the Alert
+17. Return to the Dashboard.
+18. Open the Alerts section again.
+19. If the alert is no longer visible in the front end, it means the alert has been successfully configured in the system."
+RAG-02,How do I add a new user to a portfolio?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,0.113,76.319,3,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",3,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"To add a new user to a portfolio, follow these steps:
+1. Access the Dashboard
+Open the dashboard of the portfolio to which you want to assign the new user.
+2. Navigate to User Management
+On the far-left side of the dashboard, locate the User Management button.
+Click on this button to access the user management section.
+3. Create a New User
+In the user management section, find the Create New User option located at the top right
+corner of the screen.
+Click on Create New User to open the user creation form.
+4. Enter User Details
+Fill in the required information in the form:
+- First Name
+- Last Name
+- Email Address
+- Password (create a new password)
+- Confirm Password
+- Role (select the appropriate role based on access level)
+- Active (tick the checkbox to activate the user)
+5. Save the User
+After entering all the necessary details, click on the Add User button.
+6. Confirmation
+Once submitted, the new user will be successfully created and visible on the platform."
+RAG-03,How do I assign a single sensor to a portfolio?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,0.102,51.29,6,"[1, 2, 3, 4, 5]","[1, 3]","[1, 3]",2,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"To assign a single sensor to a portfolio, follow these steps:
+1. Go to the Devices tab in the portfolio.
+2. Click Assign New Device.
+3. Select Sensors.
+4. Enter either the last 5 digits of the DevEUI or the full DevEUI in the bar, then click Assign. The sensor will be assigned to the portfolio."
+RAG-04,How do I assign multiple sensors using a CSV file?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,0.142,54.827,4,"[1, 4, 5]","[1, 4, 5]","[4, 5]",2,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"To assign multiple sensors using a CSV file, follow these steps:
+1. Click on Download Template to get the CSV file.
+2. Open the CSV file and fill in the Batch column with the portfolio name and add the DevEUI numbers in the DevEUI column.
+3. Save the file and close it.
+4. Return to the platform and click on Upload Batch.
+5. Upload the saved CSV file.
+6. Once uploaded, recheck under Available Devices by searching each DevEUI. If the DevEUIs appear, it confirms that all sensors have been successfully assigned to the portfolio and the number of available device changed."
+RAG-05,How do I export dashboard data to Excel?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,0.113,176.174,6,"[1, 2, 3, 4, 5, 6]","[1, 2, 3, 4]","[1, 2, 3]",3,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"To export dashboard data to Excel, follow these steps:
+1. Go to the SmartViz Dashboard home page.
+2. Select the portfolio you want to work with.
+3. From the left-hand navigation panel, click the Map View icon.
+4. On the right-hand side of the screen, click the Export button.
+5. In the export menu, select Data.
+6. Choose the building whose data you want to export.
+7. Select the required date range from the Date Range section.
+8. Choose the preferred data resolution:
+   - Granular data
+   - Aggregated hourly data
+9. Select the metrics you want to include in the export, such as:
+   - Occupancy
+   - Booking
+   - Utilisation
+   - Temperature
+   - Booking %
+   - Humidity
+10. After configuring all required fields, click Download."
+RAG-06,How do I export a report for a building?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,0.33,68.607,6,"[1, 2, 3, 4, 5, 6]","[1, 2, 4, 5]","[1, 4, 5]",3,TRUE,TRUE,TRUE,TRUE,TRUE,0.857,FALSE,FALSE,,"To export a report for a building, follow these steps:
+1. Go to the SmartViz Dashboard home page.
+2. Select the portfolio you want to work with.
+3. From the left-hand navigation panel, click the Map View icon.
+4. On the right-hand side of the screen, click the Export button.
+5. In the export menu, select Report.
+6. Choose the required Report Type.
+7. Choose the building whose information you want to export.
+To export information for a single building, select the building name from the dropdown list.
+To export information for all buildings, select the All option.
+8. Click Download.
+The report file will be downloaded to your device."
+RAG-07,How do I export space information for all buildings?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,0.107,61.703,6,"[1, 2, 3, 4, 5, 6]","[1, 2, 5, 6]",[6],1,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"To export space information for all buildings, follow these steps:
+1. Go to the SmartViz Dashboard home page.
+2. Select the portfolio you want to work with.
+3. From the left-hand navigation panel, click the Map View icon.
+4. On the right-hand side of the screen, click the Export button.
+5. In the export menu, select Space Information.
+6. Select the All option to export information for all buildings.
+7. Click Download.
+The space information file will be downloaded automatically to your device."
+RAG-08,What export options are available in the SmartViz Dashboard?,TRUE,TRUE,FALSE,ok,local_llm,multi_query_diagnostic,4,0.5,2.899,31.28,3,"[1, 2, 4]","[1, 2]","[1, 2, 4]",3,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,"The export options available in the SmartViz Dashboard are Data, Report, and Space Information."
+RAG-09,How do I reset my SmartViz password?,FALSE,FALSE,TRUE,insufficient_evidence,deterministic_fallback,multi_query_diagnostic,4,0.5,0.079,0,0,[],[],[],0,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,I don't have enough documentation evidence to answer this question.
+RAG-10,What is SmartViz's exact data-retention period?,FALSE,FALSE,TRUE,insufficient_evidence,deterministic_fallback,multi_query_diagnostic,4,0.5,0.048,0,0,[],[],[],0,TRUE,TRUE,TRUE,TRUE,TRUE,1,TRUE,TRUE,,I don't have enough documentation evidence to answer this question.
