@@ -16,9 +16,9 @@ class BaseOllamaAgent:
 
     def __init__(
         self,
-        model: str = "deepseek-r1:1.5b",
+        model: str = "qwen2.5:7b",
         ollama_url: str = OLLAMA_URL,
-        timeout: int = 120,
+        timeout: int = 300,
     ) -> None:
         self.model = model
         self.ollama_url = ollama_url
